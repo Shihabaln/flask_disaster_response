@@ -43,28 +43,30 @@ C:.
 +---.ipynb_checkpoints
 |       ETL Pipeline Preparation-checkpoint.ipynb
 |       ML Pipeline Preparation-checkpoint.ipynb
+|       Ml-checkpoint.ipynb
+|       
 +---App
 |   |   figure.py
 |   |   run.py
 |   |   
 |   +---static
 |   |   +---favicon
-|   |   |            
+|   |   |       
 |   |   +---img
 |   |   |       
 |   |   \---styles
 |   |           
 |   +---templates
-|   |       go.html
-|   |       master.html
+|   |       
+|           
 +---data
 |   |   categories.csv
 |   |   DisasterResponse.db
 |   |   ETL Pipeline Preparation.ipynb
 |   |   messages.csv
 |   |   process_data.py
-|   
-|   
+|   |   
+|   \---.ipynb_checkpoints
 \---models
         classifier.pkl
         Ml.ipynb
