@@ -30,7 +30,9 @@ def clean_data(df):
     
         # convert column from string to numeric
         categories[column] = categories[column].astype('int')
-
+    
+    #extract values with 0 and 1 only 
+    categories = categories.clip(0, 1)
     #replacing categories column in df with new coumns 
     df = df.drop("categories", axis =1)
     df = pd.concat([df, categories], axis =1)
