@@ -27,7 +27,12 @@ A machine learning model was trained with messages received from news, social me
 The user then can insert any message and the app will try to classify it to categories, so that organizations can priorities responses and act accordingly. 
 
 ## Results<a name="results"></a>
+messages test of how the app works :
+<img width="911" alt="image" src="https://user-images.githubusercontent.com/83282165/159412931-e87af2da-a7cc-4338-ba36-e1b2efcea030.png">
 
+![Screenshot 2022-03-22 075706](https://user-images.githubusercontent.com/83282165/159412372-7619569e-ec8d-4ae5-abc8-347b4303d0a7.jpg)
+
+![Screenshot 2022-03-22 075900](https://user-images.githubusercontent.com/83282165/159412234-d1e57cdb-0bb0-4236-a63a-e525d0934b0e.jpg)
 
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
@@ -35,43 +40,5 @@ The user then can insert any message and the app will try to classify it to cate
 This project is licensed under the MIT License
 
 ## Files
-C:.
-|   .gitignore
-|   README.md
-|   requirements
-|   
-|  
-|       
-#App?
-|   |   figure.py
-|   |   run.py
-|   |   
-|   +---static
-|   |   +---favicon
-|   |   |    
-|   |   |       
-|   |   +---img
-|   |   |       
-|   |   \---styles
-|   |           
-|   +---templates
-|   |       go.html
-|   |       master.html
-|   |       
-|   \---__pycache__
-|           figure.cpython-310.pyc
-|           
-#Data?
-|   |   categories.csv
-|   |   DisasterResponse.db
-|   |   ETL Pipeline Preparation.ipynb
-|   |   messages.csv
-|   |   process_data.py
-|   |   
-|   \---.ipynb_checkpoints
-#Model?
-|       classifier.pkl
-|       Ml.ipynb
-|       train_classifier.py
 ![image](https://user-images.githubusercontent.com/83282165/159412005-f1a68f00-c418-4186-a7ec-e6b9fef89c7b.png)
 
