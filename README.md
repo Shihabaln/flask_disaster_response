@@ -15,6 +15,18 @@ In the created env , install all packages used:
 ```cli
 pip install -r requirements.txt
 ```
+In order to set up the model with data to do the processing and train the model, do the following: 
+
+```cli
+cd Data
+python process_data.py disaster_messages.csv disaster_categories.csv 'DisasterResponse.db'
+```
+Then train the model and save it
+
+```cli
+cd models
+python train_classifier.py ./data/DisasterResponse.db classifier.pkl
+```
 
 Then run the app :
 ```cli
