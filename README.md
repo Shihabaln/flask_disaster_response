@@ -38,28 +38,30 @@ This project is licensed under the MIT License
 C:.
 |   .gitignore
 |   README.md
-|   tree.txt
+|   requirements
 |   
-+---.ipynb_checkpoints
-|       ETL Pipeline Preparation-checkpoint.ipynb
-|       ML Pipeline Preparation-checkpoint.ipynb
-|       Ml-checkpoint.ipynb
+|  
 |       
-+---App
+#App?
 |   |   figure.py
 |   |   run.py
 |   |   
 |   +---static
 |   |   +---favicon
+|   |   |    
 |   |   |       
 |   |   +---img
 |   |   |       
 |   |   \---styles
 |   |           
 |   +---templates
+|   |       go.html
+|   |       master.html
 |   |       
+|   \---__pycache__
+|           figure.cpython-310.pyc
 |           
-+---data
+#Data?
 |   |   categories.csv
 |   |   DisasterResponse.db
 |   |   ETL Pipeline Preparation.ipynb
@@ -67,7 +69,9 @@ C:.
 |   |   process_data.py
 |   |   
 |   \---.ipynb_checkpoints
-\---models
-        classifier.pkl
-        Ml.ipynb
-        train_classifier.py
+#Model?
+|       classifier.pkl
+|       Ml.ipynb
+|       train_classifier.py
+![image](https://user-images.githubusercontent.com/83282165/159412005-f1a68f00-c418-4186-a7ec-e6b9fef89c7b.png)
+
