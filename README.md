@@ -37,6 +37,9 @@ A machine learning model was trained with messages received from news, social me
 The user then can insert any message and the app will try to classify it to categories, so that organizations can priorities responses and act accordingly. 
 
 ## Results<a name="results"></a>
+main page :
+<img width="945" alt="image" src="https://user-images.githubusercontent.com/83282165/159465963-ed423f58-60a1-4f0c-ab50-1510f59e16a7.png">
+
 messages test of how the app works :
 <img width="911" alt="image" src="https://user-images.githubusercontent.com/83282165/159412931-e87af2da-a7cc-4338-ba36-e1b2efcea030.png">
 
