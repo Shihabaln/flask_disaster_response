@@ -7,6 +7,7 @@ from sklearn.pipeline import Pipeline, FeatureUnion
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.multioutput import MultiOutputClassifier
+from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import classification_report, fbeta_score
 
 import re
@@ -64,23 +65,31 @@ def tokenize(text):
     return clean_tokens
 
 def build_model():
-  """
-  Function to build NLP pipeline
-  """
-  pipeline = Pipeline([
-        ('features', FeatureUnion([
+    """
+    Function to build NLP pipeline
+    """
+    
+    
+    pipeline = Pipeline([
+            ('features', FeatureUnion([
 
-            ('text_pipeline', Pipeline([
-                ('count_vectorizer', CountVectorizer(tokenizer=tokenize)),
-                ('tfidf_transformer', TfidfTransformer())
-            ]))
-            
-        ])),
+                ('text_pipeline', Pipeline([
+                    ('count_vectorizer', CountVectorizer(tokenizer=tokenize)),
+                    ('tfidf_transformer', TfidfTransformer())
+                ]))
+                
+            ])),
 
-        ('classifier', MultiOutputClassifier(RandomForestClassifier()))
-    ])
-
-  return pipeline
+            ('classifier', MultiOutputClassifier(RandomForestClassifier()))
+        ])
+    
+    parameters ={
+        'classifier__estimator__max_depth': [3, None],
+        'classifier__estimator__n_estimators': [10, 20, 40],
+        'features__text_pipeline__tfidf_transformer__use_idf': (True, False)
+         } 
+    cv = GridSearchCV(pipeline, param_grid=parameters ,n_jobs=-1, verbose=1)
+    return cv
 
 def evaluate_model(model, X_test, Y_test, category_names):
     """Print classification report for positive labels"""
