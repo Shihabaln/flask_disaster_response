@@ -21,9 +21,7 @@ def load_data(database_filepath):
     Function to load data from databse 
     and parse it into features
     """
-
-    # engine = create_engine('sqlite:///' + database_filepath)
-    # df = pd.read_sql_table('df', engine)
+    
     connect_str = f"sqlite:///{database_filepath}"
     engine = create_engine(connect_str)
     df = pd.read_sql("SELECT * FROM df", engine)

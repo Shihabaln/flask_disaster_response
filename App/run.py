@@ -7,10 +7,9 @@ from nltk.tokenize import word_tokenize
 
 from flask import Flask
 from flask import render_template, request, jsonify
-from plotly.graph_objs import Bar
 import joblib
 from sqlalchemy import create_engine
-
+from figure import create_graphs
 
 app = Flask(__name__)
 
@@ -37,35 +36,10 @@ model = joblib.load("../models/classifier.pkl")
 @app.route('/')
 @app.route('/index')
 def index():
-    
-    # extract data needed for visuals
-    # TODO: Below is an example - modify to extract data for your own visuals
-    genre_counts = df.groupby('genre').count()['message']
-    genre_names = list(genre_counts.index)
-    
-    # create visuals
-    # TODO: Below is an example - modify to create your own visuals
-    graphs = [
-        {
-            'data': [
-                Bar(
-                    x=genre_names,
-                    y=genre_counts
-                )
-            ],
 
-            'layout': {
-                'title': 'Distribution of Message Genres',
-                'yaxis': {
-                    'title': "Count"
-                },
-                'xaxis': {
-                    'title': "Genre"
-                }
-            }
-        }
-    ]
-    
+    # create graphs
+    graphs = create_graphs(df)
+
     # encode plotly graphs in JSON
     ids = ["graph-{}".format(i) for i, _ in enumerate(graphs)]
     graphJSON = json.dumps(graphs, cls=plotly.utils.PlotlyJSONEncoder)
@@ -92,9 +66,11 @@ def go():
     )
 
 
-def main():
-    app.run(host='0.0.0.0', port=3000, debug=True)
+# def main():
+#     app.run(host='0.0.0.0', port=3000, debug=True)
 
 
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()
+
+app.run()

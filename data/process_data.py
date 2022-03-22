@@ -74,7 +74,7 @@ def main():
 
 
     else:
-
+ 
         print('Please provide the filepaths of the messages and categories '\
 
               'datasets as the first and second argument respectively, as '\

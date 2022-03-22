@@ -1,0 +1,59 @@
+Folder PATH listing for volume Windows
+Volume serial number is 7245-CA1C
+C:.
+|   .gitignore
+|   README.md
+|   tree.txt
+|   
++---.ipynb_checkpoints
+|       ETL Pipeline Preparation-checkpoint.ipynb
+|       ML Pipeline Preparation-checkpoint.ipynb
+|       Ml-checkpoint.ipynb
+|       
++---App
+|   |   figure.py
+|   |   run.py
+|   |   
+|   +---static
+|   |   +---favicon
+|   |   |       about.txt
+|   |   |       android-chrome-192x192.png
+|   |   |       android-chrome-512x512.png
+|   |   |       apple-touch-icon.png
+|   |   |       browserconfig.xml
+|   |   |       favicon-16x16.png
+|   |   |       favicon-32x32.png
+|   |   |       favicon.ico
+|   |   |       site.webmanifest
+|   |   |       
+|   |   +---img
+|   |   |       .DS_Store
+|   |   |       githublogo.png
+|   |   |       linkedinlogo.png
+|   |   |       
+|   |   \---styles
+|   |           main.css
+|   |           normalize.css
+|   |           reset.css
+|   |           typography.css
+|   |           
+|   +---templates
+|   |       go.html
+|   |       master.html
+|   |       
+|   \---__pycache__
+|           figure.cpython-310.pyc
+|           
++---data
+|   |   categories.csv
+|   |   DisasterResponse.db
+|   |   ETL Pipeline Preparation.ipynb
+|   |   messages.csv
+|   |   process_data.py
+|   |   
+|   \---.ipynb_checkpoints
+\---models
+        classifier.pkl
+        Ml.ipynb
+        train_classifier.py
+        
