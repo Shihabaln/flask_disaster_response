@@ -32,7 +32,7 @@ python app/run.py
 ```
 ## Project Motivation<a name="motivation"></a>
 
-This project goal is to mimic how organizations responds to messages received during a disaster. 
+This project goal is to mimic how organizations respond to messages received during a disaster. 
 A machine learning model was trained with messages received from news, social media, and other direct messages.
 The user then can insert any message and the app will try to classify it to categories, so that organizations can priorities responses and act accordingly. 
 
